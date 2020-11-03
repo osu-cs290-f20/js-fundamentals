@@ -128,3 +128,40 @@ console.log("== contents of arr using forEach() and anonymous function:");
 arr.forEach(function (elem) {
   console.log("  -- elem:", elem);
 });
+
+console.log("\n===========================");
+console.log("== Objects");
+console.log("===========================\n");
+
+var person = {
+  firstName: "Luke",
+  lastName: "Skywalker",
+  age: 24,
+  getFullName: function (reverse) {
+    if (reverse) {
+      return this.lastName + ", " + this.firstName;
+    } else {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+};
+console.log("== person:", person);
+console.log("== person['firstName']:", person['firstName']);
+console.log("== person.firstName:", person.firstName);
+console.log("== person.getFullName():", person.getFullName());
+console.log("== person.getFullName(true):", person.getFullName(true));
+
+// var person2 = {
+//   firstName: "Rey",
+//   lastName: "?"
+// };
+
+// var fieldToAccess = "firstName";
+// console.log("== person[fieldToAccess]:", person[fieldToAccess]);
+//
+// var arrayOfPeople = [
+//   { firstName: "Luke" },
+//   { firstName: "Rey" },
+//   { firstName: "Finn" }
+// ];
+// console.log("== arrayOfPeople[2].firstName:", arrayOfPeople[2].firstName);
